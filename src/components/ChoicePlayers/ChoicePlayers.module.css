@@ -1,0 +1,89 @@
+.choiceContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.choiceContainer > h2 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 25px;
+    margin-bottom: 10rem;
+}
+
+.choiceContainer > div {
+    width: 19rem;
+    height: 19rem;
+    margin: 0 auto;
+}
+
+.choiceContainer > div > div:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.choiceContainer > div:active {
+    transform: translateY(0rem);
+    pointer-events: none !important;
+    box-shadow: inherit;
+}
+
+.choiceContainer > div > div {
+    width: 15rem;
+    height: 15rem;
+}
+
+.choiceContainer > div > div > img {
+    width: 50%;
+    height: auto;
+}
+
+@media screen and (max-width: 1500px) {
+    .choiceContainer > h2 {
+        margin-bottom: 5rem;
+    }
+
+    .choiceContainer > div {
+        width: 17rem;
+        height: 17rem;
+    }
+
+    .choiceContainer > div > div {
+        width: 14rem;
+        height: 14rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .choiceContainer {
+        flex-direction: column-reverse;
+    }
+
+    .choiceContainer > h2 {
+        font-size: 16px;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+
+    .choiceContainer > div {
+        width: 11rem;
+        height: 11rem;
+    }
+
+    .choiceContainer > div > div {
+        width: 9rem;
+        height: 9rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .choiceContainer > div {
+        width: 9rem;
+        height: 9rem;
+    }
+
+    .choiceContainer > div > div {
+        width: 7rem;
+        height: 7rem;
+    }
+}

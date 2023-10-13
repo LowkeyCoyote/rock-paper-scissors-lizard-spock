@@ -1,0 +1,130 @@
+.buttonWrapper {
+    width: 11.5rem;
+    height: 11.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+}
+
+.buttonContainer,
+.buttonContainerWinning {
+    border-radius: 999px;
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 9rem;
+    height: 9rem;
+    box-shadow: inset 0 0.5rem 0 rgba(96, 110, 133, 0.25);
+}
+
+.buttonContainerWinningAnimation {
+    box-shadow: 0 0 0px rgba(39, 50, 82, 0.8), 0 0 0px rgba(39, 50, 82, 0.5),
+        0 0 0px rgba(33, 44, 76, 0.5);
+    animation: borderFadeIn 1500ms infinite !important;
+}
+
+.buttonContainer:hover {
+    background-color: white;
+    transition: all ease-in-out 0.15s;
+}
+
+.buttonWrapper:active {
+    transform: translateY(0.5rem);
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 0 rgba(66, 76, 93, 0.25) !important;
+}
+
+.pulsatingCircle {
+    background-color: hsl(240, 61%, 7%);
+    opacity: 0.2;
+    border-radius: 999px;
+    width: 19rem;
+    height: 19rem;
+    animation: pulse 2s infinite;
+}
+
+.buttonContainerWinningAnimationWithDelay {
+    box-shadow: 0 0 0px rgba(39, 50, 82, 0.8), 0 0 0px rgba(39, 50, 82, 0.5),
+        0 0 0px rgba(33, 44, 76, 0.5);
+    animation: fadeIn 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        borderFadeIn 2s 4s infinite !important ;
+}
+
+.buttonContainerWinningAnimation {
+    box-shadow: 0 0 0px rgba(39, 50, 82, 0.8), 0 0 0px rgba(39, 50, 82, 0.5),
+        0 0 0px rgba(33, 44, 76, 0.5);
+    animation: fadeIn 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        borderFadeIn 2s 2s infinite !important ;
+}
+
+.fadeIn {
+    animation: fadeIn 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(0.1);
+    }
+}
+
+@keyframes borderFadeIn {
+    0% {
+        box-shadow: 0 0 0px rgba(39, 50, 82, 0.8), 0 0 0px rgba(39, 50, 82, 0.5),
+            0 0 0px rgba(33, 44, 76, 0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 100px rgba(39, 50, 82), 0 0 150px rgba(39, 50, 82),
+            0 0 200px rgba(33, 44, 76);
+    }
+    100% {
+        box-shadow: 0 0 0px rgba(39, 50, 82, 0.8), 0 0 0px rgba(39, 50, 82, 0.5),
+            0 0 0px rgba(33, 44, 76, 0.5);
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .buttonWrapper {
+        width: 9.5rem;
+        height: 9.5rem;
+    }
+
+    .buttonContainer {
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .buttonWrapper {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .buttonContainer {
+        width: 5.5rem;
+        height: 5.5rem;
+    }
+
+    .buttonContainer img {
+        height: 50%;
+        width: auto;
+    }
+}
