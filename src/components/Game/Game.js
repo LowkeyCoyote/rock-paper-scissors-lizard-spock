@@ -58,6 +58,7 @@ export default function Game() {
                     setWinner(true);
                     setResultText('You won');
                     setScore(score + 1);
+                    return;
                 } else {
                     setWinner(false);
                     setResultText('You loss');
