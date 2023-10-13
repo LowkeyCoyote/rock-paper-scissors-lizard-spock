@@ -95,7 +95,7 @@ export default function Game() {
                     <div className={styles.choicePlayerContainer}>
                         <ChoicePlayers
                             gradient={{
-                                ...buttonsStyleDataObject[ChoiceComputer]
+                                ...buttonsStyleDataObject[ChoicePlayer]
                                     .gradient,
                                 animationDelay: '2000ms !important',
                             }}
