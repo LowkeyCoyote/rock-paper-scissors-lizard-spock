@@ -35,6 +35,7 @@ export default function Button(props) {
                 >
                     <div className={styles.buttonContainer}>
                         <img src={props.icon} alt="" />
+                        
                     </div>
                 </div>
             )}
