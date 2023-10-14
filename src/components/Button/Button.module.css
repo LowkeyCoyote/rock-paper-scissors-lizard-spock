@@ -46,17 +46,17 @@
 }
 
 .buttonContainerWinningAnimationWithDelay {
-    box-shadow: 0 0 0px rgba(39, 50, 82, 0.8), 0 0 0px rgba(39, 50, 82, 0.5),
+    box-shadow: 0 0 0px rgba(205, 213, 237, 0.8), 0 0 0px rgba(125, 140, 183, 0.5),
         0 0 0px rgba(33, 44, 76, 0.5);
     animation: fadeIn 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-        borderFadeIn 2s 4s infinite !important ;
+        borderFadeIn 2s 2.5s infinite !important ;
 }
 
 .buttonContainerWinningAnimation {
-    box-shadow: 0 0 0px rgba(39, 50, 82, 0.8), 0 0 0px rgba(39, 50, 82, 0.5),
-        0 0 0px rgba(33, 44, 76, 0.5);
+    box-shadow: 0 0 0px rgba(205, 213, 237, 0.8), 0 0 0px rgba(125, 140, 183, 0.5),
+        0 0 0px rgba(61, 75, 119, 0.7);
     animation: fadeIn 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-        borderFadeIn 2s 2s infinite !important ;
+        borderFadeIn 2s 0.5s infinite !important ;
 }
 
 .fadeIn {
@@ -86,13 +86,13 @@
 
 @keyframes borderFadeIn {
     0% {
-        box-shadow: 0 0 0px rgba(39, 50, 82, 0.8), 0 0 0px rgba(39, 50, 82, 0.5),
+        box-shadow: 0 0 0px rgba(39, 50, 82, 0.8), 0 0 0px rgba(39, 50, 82, 0.8),
             0 0 0px rgba(33, 44, 76, 0.5);
     }
 
     50% {
-        box-shadow: 0 0 100px rgba(39, 50, 82), 0 0 150px rgba(39, 50, 82),
-            0 0 200px rgba(33, 44, 76);
+        box-shadow: 0 0 125px rgb(57, 70, 109), 0 0 175px rgb(60, 73, 111),
+            0 0 2225px rgb(50, 63, 104);
     }
     100% {
         box-shadow: 0 0 0px rgba(39, 50, 82, 0.8), 0 0 0px rgba(39, 50, 82, 0.5),

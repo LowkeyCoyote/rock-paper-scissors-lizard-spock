@@ -34,6 +34,12 @@ export default function Game() {
         setSteps(1);
     };
 
+    const handleScoreUpdate = (number) => {
+        setTimeout(() => {
+            setScore(score + number);
+        }, 2000);
+    };
+
     useEffect(() => {
         if (ChoicePlayer !== null) {
             const handleWinner = (player, computer) => {
@@ -57,7 +63,7 @@ export default function Game() {
                 ) {
                     setWinner(true);
                     setResultText('You won');
-                    setScore(score + 1);
+                    handleScoreUpdate(1);
                     return;
                 } else {
                     setWinner(false);
@@ -65,7 +71,7 @@ export default function Game() {
                     if (score === 0) {
                         return;
                     }
-                    setScore(score - 1);
+                    handleScoreUpdate(-1);
                 }
             };
             handleWinner(ChoicePlayer, ChoiceComputer);
@@ -95,10 +101,7 @@ export default function Game() {
                     <div className={styles.choicePlayerContainer}>
                         <ChoicePlayers
                             gradient={{
-                                ...buttonsStyleDataObject[ChoicePlayer]
-                                    .gradient,
-                                animationDelay: '2000ms !important',
-                            }}
+                                ...buttonsStyleDataObject[ChoicePlayer].gradient}}
                             icon={buttonsStyleDataObject[ChoicePlayer].icon}
                             text="You picked"
                             choice={`true`}
@@ -110,11 +113,7 @@ export default function Game() {
                             playAgainclick={handlePlayAgain}
                         />
                         <ChoicePlayers
-                            gradient={{
-                                ...buttonsStyleDataObject[ChoiceComputer]
-                                    .gradient,
-                                animationDelay: '0ms !important',
-                            }}
+                            gradient={{...buttonsStyleDataObject[ChoiceComputer].gradient}}
                             icon={buttonsStyleDataObject[ChoiceComputer].icon}
                             text="The House Picked"
                             animation={true}
